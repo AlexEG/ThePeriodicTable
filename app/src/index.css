@@ -4,74 +4,38 @@
 
 .nonmetal,
 .halogen {
-  background: linear-gradient(
-    110deg,
-    rgba(255, 255, 0, 0.2),
-    rgba(255, 255, 0, 0.3)
-  );
+  background: linear-gradient(110deg, #ffff0033, rgba(255, 255, 0, 0.3));
 }
 
 .alkali-metal {
-  background: linear-gradient(
-    110deg,
-    rgba(255, 0, 0, 0.2),
-    rgba(255, 0, 0, 0.25)
-  );
+  background: linear-gradient(110deg, #ff000033, rgba(255, 0, 0, 0.25));
 }
 
 .alkaline-earth-metal {
-  background: linear-gradient(
-    110deg,
-    rgba(64, 64, 255, 0.2),
-    rgba(64, 64, 255, 0.25)
-  );
+  background: linear-gradient(110deg, #4040ff33, rgba(64, 64, 255, 0.25));
 }
 
 .transition-metal {
-  background: linear-gradient(
-    110deg,
-    rgba(0, 128, 255, 0.2),
-    rgba(0, 128, 255, 0.3)
-  );
+  background: linear-gradient(110deg, #0080ff33, rgba(0, 128, 255, 0.3));
 }
 
 .post-transition-metal {
-  background: linear-gradient(
-    110deg,
-    rgba(0, 255, 0, 0.2),
-    rgba(0, 255, 0, 0.3)
-  );
+  background: linear-gradient(110deg, #00ff0033, rgba(0, 255, 0, 0.3));
 }
 
 .metalloid {
-  background: linear-gradient(
-    110deg,
-    rgba(140, 190, 0, 0.2),
-    rgba(140, 190, 0, 0.3)
-  );
+  background: linear-gradient(110deg, #8cbe0033, rgba(140, 190, 0, 0.3));
 }
 
 .noble-gas {
-  background: linear-gradient(
-    110deg,
-    rgba(255, 152, 0, 0.2),
-    rgba(255, 152, 0, 0.3)
-  );
+  background: linear-gradient(110deg, #ff980033, rgba(255, 152, 0, 0.3));
 }
 
 .lanthanide {
-  background: linear-gradient(
-    110deg,
-    rgba(0, 255, 255, 0.25),
-    rgba(0, 255, 255, 0.35)
-  );
+  background: linear-gradient(110deg, #00ffff40, rgba(0, 255, 255, 0.35));
 }
 
 .Lawrencium,
 .actinide {
-  background: linear-gradient(
-    110deg,
-    rgba(64, 255, 192, 0.25),
-    rgba(64, 255, 192, 0.35)
-  );
+  background: linear-gradient(110deg, #40ffc040, rgba(64, 255, 192, 0.35));
 }

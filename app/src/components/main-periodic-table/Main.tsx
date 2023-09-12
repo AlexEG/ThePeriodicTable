@@ -3,10 +3,15 @@ import { colStart, rowStart } from "./RowColClasses";
 import PeriodicTableData from "../../PubChemElements_all.json";
 import { btnBgColor } from "./utils";
 
-function Main() {
+function Main({
+  ElementNumberInPreview,
+}: {
+  ElementNumberInPreview(elementNumber: number): void;
+}) {
   const elements = PeriodicTableData.element.map((x) => {
     return (
       <ElementBtn
+        key={x[0]}
         row={rowStart[+x[17] - 1]}
         col={colStart[+x[18] - 1]}
         AtomicNumber={x[0]}
@@ -14,12 +19,13 @@ function Main() {
         Name={x[2]}
         AtomicMass={x[3]}
         bgColor={btnBgColor(x[15])}
+        ElementNumberInPreview={ElementNumberInPreview}
       />
     );
   });
 
   return (
-    <main className="bg-black pt-10 px-4  h-[calc(100%-11rem)] overflow-auto ">
+    <main className="bg-black pt-10 px-4  h-[calc(100%-11rem)] overflow-auto select-none">
       <div className="grid grid-cols-18 grid-rows-9 gap-1 mx-auto w-fit">
         {elements}
 

@@ -6,6 +6,7 @@ interface ElementBtn {
   Name: string;
   AtomicMass: string;
   bgColor: string;
+  ElementNumberInPreview(elementNumber: number): void;
 }
 function ElementBtn({
   row,
@@ -15,11 +16,12 @@ function ElementBtn({
   Name,
   AtomicMass,
   bgColor,
+  ElementNumberInPreview,
 }: ElementBtn) {
   return (
     <button
-      className={`w-full h-full  text-center leading-none py-px sm:py-1 shadow-inner border border-[hsla(0,0%,100%,0.2)] text-white/90 text-xs grid grid-cols-1 grid-rows-4 ${row} ${col} ${bgColor} `}
-      data-element-info-open="false"
+      onClick={() => ElementNumberInPreview(+AtomicNumber)}
+      className={`element-btn w-full h-full text-center leading-none py-px sm:py-1 shadow-inner border border-[hsla(0,0%,100%,0.2)] text-white/90 text-xs grid grid-cols-1 grid-rows-4 brightness-95 hover:brightness-110  hover:drop-shadow-[0_0_40px_#fff] ${row} ${col} ${bgColor}`}
       data-atomic-number={AtomicNumber}
     >
       <div className="h-full flex flex-nowrap items-center px-1">
