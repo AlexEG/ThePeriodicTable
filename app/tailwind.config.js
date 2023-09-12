@@ -17,6 +17,9 @@ export default {
         8: "8",
         9: "9",
       },
+      gridRowEnd: {
+        10: "10",
+      },
       gridColumnStart: {
         13: "13",
         14: "14",

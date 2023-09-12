@@ -1,27 +1,36 @@
 interface ElementBtn {
   row: string;
   col: string;
+  AtomicNumber: string;
+  Symbol: string;
+  Name: string;
+  AtomicMass: string;
+  bgColor: string;
 }
-function ElementBtn({ row, col }: ElementBtn) {
+function ElementBtn({
+  row,
+  col,
+  AtomicNumber,
+  Symbol,
+  Name,
+  AtomicMass,
+  bgColor,
+}: ElementBtn) {
   return (
     <button
-      className={`w-full h-full  text-center leading-none py-px sm:py-1 shadow-inner border border-[hsla(60,100%,80%,0.5)] text-white/90 text-xs grid grid-cols-1 grid-rows-4 ${row} ${col}`}
+      className={`w-full h-full  text-center leading-none py-px sm:py-1 shadow-inner border border-[hsla(0,0%,100%,0.2)] text-white/90 text-xs grid grid-cols-1 grid-rows-4 ${row} ${col} ${bgColor} `}
       data-element-info-open="false"
-      data-chemical-group-block="nonmetal"
-      style={{
-        background:
-          "linear-gradient(110deg, rgba(255, 255, 0, 0.2), rgba(255, 255, 0, 0.3))",
-      }}
+      data-atomic-number={AtomicNumber}
     >
       <div className="h-full flex flex-nowrap items-center px-1">
         <div
-          className="text-left font-medium text-3xs text-sm flex-1 pr-1 "
+          className="text-left font-medium text-3xs text-xs flex-1 pr-2 "
           data-tooltip="Atomic Number"
         >
-          1
+          {AtomicNumber}
         </div>
         <div className="text-2xs py-1 truncate" data-tooltip="Atomic Mass, u">
-          1.0080
+          {AtomicMass}
         </div>
       </div>
 
@@ -29,11 +38,11 @@ function ElementBtn({ row, col }: ElementBtn) {
         className="font-medium text-xl row-span-2 h-full"
         data-tooltip="Symbol"
       >
-        H
+        {Symbol}
       </div>
 
       <div className="h-full truncate" data-tooltip="Name">
-        Hydrogen
+        {Name}
       </div>
     </button>
   );
